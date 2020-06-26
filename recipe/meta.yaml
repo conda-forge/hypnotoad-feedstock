@@ -1,5 +1,5 @@
 {% set name = "hypnotoad" %}
-{% set version = "0.1.4" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d9e512633c82e0656f97f7312f9373fa843e1c15e2bcde157918a891f1ef644a
+  sha256: b053e8f8ba5efe541df75e55b38a73966e042d25b526f7a87a56806ee922fbc5
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - hypnotoad_geqdsk = hypnotoad.scripts.hypnotoad_geqdsk:main
     - hypnotoad_torpex = hypnotoad.scripts.hypnotoad_torpex:main
