@@ -5,11 +5,11 @@ Home: https://github.com/boutproject/hypnotoad
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hypnotoad-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python grid generator for BOUT++
 
-
+Development: https://github.com/boutproject/hypnotoad
 
 Current build status
 ====================
