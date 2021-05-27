@@ -11,9 +11,10 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
+    - hypnotoad_circular = hypnotoad.scripts.hypnotoad_circular:main
     - hypnotoad_geqdsk = hypnotoad.scripts.hypnotoad_geqdsk:main
     - hypnotoad_torpex = hypnotoad.scripts.hypnotoad_torpex:main
     - hypnotoad-gui = hypnotoad.gui:main
@@ -45,6 +46,7 @@ test:
     - pyside2
   commands:
     - pytest --pyargs hypnotoad
+    - hypnotoad_circular -h
     - hypnotoad_geqdsk -h
     - hypnotoad_torpex -h
     - hypnotoad-gui -h
