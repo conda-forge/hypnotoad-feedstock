@@ -24,7 +24,8 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - boututils >=0.1.4
+    - boututils >=0.1.7
+    - dill >=0.3
     - func_timeout >=4.3
     - matplotlib-base >=3.2
     - netcdf4 >=1.5
@@ -32,7 +33,7 @@ requirements:
     - optionsfactory >=1.0.3
     - pyparsing >=2.4
     - pyyaml >=5.1
-    - scipy >=1.4
+    - scipy >=1.6
     - qt.py >=1.2
   run_constrained:
     - pyside2 >=5.13
