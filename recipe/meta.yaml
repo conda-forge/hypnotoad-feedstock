@@ -1,5 +1,5 @@
 {% set name = "hypnotoad" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1fadd02c8918e5974a32ce5188b9c81630d61d60c48e478895de4d6545b14c08
+  sha256: 65f348bfa85f6e8e018897a8b4b8cb36d5af8ed85d3cda73adb740a5dabfe515
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - hypnotoad_circular = hypnotoad.scripts.hypnotoad_circular:main
