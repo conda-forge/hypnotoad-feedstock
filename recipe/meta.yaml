@@ -27,6 +27,7 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - versioneer
   run:
     - python >=3.8
     - boututils >=0.1.7
