@@ -18,13 +18,17 @@ build:
     - hypnotoad_geqdsk = hypnotoad.scripts.hypnotoad_geqdsk:main
     - hypnotoad_torpex = hypnotoad.scripts.hypnotoad_torpex:main
     - hypnotoad-gui = hypnotoad.gui:main
+    - hypnotoad-plot-equilibrium = hypnotoad.scripts.hypnotoad_plot_equilibrium:main
+    - hypnotoad-plot-grid-cells = hypnotoad.scripts.hypnotoad_plot_grid_cells:main
+    - hypnotoad-recreate-inputs = hypnotoad.scripts.hypnotoad_recreate_inputs:main
+    - hypnotoad-get-flux-surfaces = hypnotoad.scripts.hypnotoad_get_flux_surfaces:main
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
   run:
-    - python >=3.6
+    - python >=3.8
     - boututils >=0.1.7
     - dill >=0.3,!=0.3.5,!=0.3.5.1
     - func_timeout >=4.3
@@ -49,6 +53,10 @@ test:
     - hypnotoad_geqdsk -h
     - hypnotoad_torpex -h
     - hypnotoad-gui -h
+    - hypnotoad-plot-equilibrium -h
+    - hypnotoad-plot-grid-cells -h
+    - hypnotoad-recreate-inputs -h
+    - hypnotoad-get-flux-surfaces -h
 
 about:
   home: https://github.com/boutproject/hypnotoad
