@@ -1,5 +1,5 @@
 {% set name = "hypnotoad" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6e550b7f8b5106d23ca35053f537f703b51afbe10e813b3c0cc3650bac42cf9b
+  sha256: 0d94baecfc96f6daf67324f41b9bd13cef19e51324dab5a69641e5cb1f8960dc
 
 build:
   noarch: python
