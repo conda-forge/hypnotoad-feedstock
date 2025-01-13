@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 597177879abff9fb678f376db4053068971c94565c14c06953ccd65773ca30da
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - hypnotoad_circular = hypnotoad.scripts.hypnotoad_circular:main
@@ -25,11 +25,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - versioneer
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - boututils >=0.1.7
     - dill >=0.3,!=0.3.5,!=0.3.5.1
     - func_timeout >=4.3
@@ -48,6 +48,7 @@ test:
   requires:
     - pytest
     - pyside2
+    - python {{ python_min }}
   commands:
     - pytest --pyargs hypnotoad
     - hypnotoad_circular -h
